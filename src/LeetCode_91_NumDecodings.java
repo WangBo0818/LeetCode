@@ -3,7 +3,7 @@
  * @date 2019/12/15 - 12:50
  * leetcode91:解码方法
  */
-public class numDecodings {
+public class LeetCode_91_NumDecodings {
     public static void main(String[] args) {
         System.out.println(numDecodings2("22"));
     }

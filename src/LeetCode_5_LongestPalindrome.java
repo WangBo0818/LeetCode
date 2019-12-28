@@ -3,7 +3,7 @@
  * @date 2019/12/26 - 9:45
  * LeetCode---5. 最长回文子串
  */
-public class longestPalindrome {
+public class LeetCode_5_LongestPalindrome {
     /**
      * 解法一：暴力破解法，找出字符串的所有子串，判断子串是否为回文子串，返回最大长度的回文子串
      * */

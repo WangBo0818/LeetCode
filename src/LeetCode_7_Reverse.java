@@ -3,7 +3,7 @@
  * @date 2019/12/26 - 16:09
  * LeetCode---7. 整数反转
  */
-public class reverse {
+public class LeetCode_7_Reverse {
     /**
      * 解法一：将整数转化为字符串，然后对字符串反转，最后再转化为int 类型
      *         在这个过程中，要注意x为负数的情况

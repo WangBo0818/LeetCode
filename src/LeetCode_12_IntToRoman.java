@@ -3,7 +3,7 @@
  * @date 2019/12/27 - 10:54
  * LeetCode---12. 整数转罗马数字
  */
-public class intToRoman {
+public class LeetCode_12_IntToRoman {
     /**
      * 解题思路：可以参考数零钱的思想，使用贪心算法，每次选择最大的最为加法因子
      * */

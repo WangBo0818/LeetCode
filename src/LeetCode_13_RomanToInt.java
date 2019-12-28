@@ -6,7 +6,7 @@ import java.util.Map;
  * @date 2019/12/27 - 11:10
  * LeetCode---13. 罗马数字转整数
  */
-public class romanToInt {
+public class LeetCode_13_RomanToInt {
     public int romanToInt(String s) {
         Map<String, Integer> map = new HashMap<>();
         map.put("0", 0);

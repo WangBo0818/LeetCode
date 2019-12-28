@@ -6,7 +6,7 @@ import java.util.List;
  * @date 2019/12/20 - 16:21
  * LeetCode---60：第k个排列
  */
-public class getPermutation {
+public class LeetCode_60_GetPermutation {
 
     public static void main(String[] args) {
         System.out.println(getPermutation(8, 13801));

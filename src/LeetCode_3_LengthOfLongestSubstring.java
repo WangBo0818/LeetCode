@@ -8,7 +8,7 @@ import java.util.Set;
  * @date 2019/12/25 - 10:32
  * LeetCode---3. 无重复字符的最长子串
  */
-public class lengthOfLongestSubstring {
+public class LeetCode_3_LengthOfLongestSubstring {
     /**
      * 解法一：暴力破解法（通不过LeetCode上该题的最后一个测试点）
      *         将字符串的所有不含重复元素的子串都找出来，然后比较这些子串的长度，返回长度最长的子串

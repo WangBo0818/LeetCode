@@ -5,7 +5,7 @@ import java.util.Arrays;
  * @date 2019/12/25 - 12:36
  * LeetCode---4. 寻找两个有序数组的中位数
  */
-public class findMedianSortedArrays {
+public class LeetCode_4_findMedianSortedArrays {
     /**
      * 解法一：
      *  将两个有序数组合并成一个数组，然后对合并后的数组进行排序，最后找出中位数

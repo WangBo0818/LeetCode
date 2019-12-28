@@ -5,7 +5,7 @@ import java.util.Stack;
  * @date 2019/12/16 - 14:50
  * leetcode150---逆波兰表达式求值
  */
-public class evalRPN {
+public class LeetCode_150_EvalRPN {
 
     public static void main(String[] args) {
         System.out.println(evalRPN(new String[] {

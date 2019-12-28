@@ -3,7 +3,7 @@
  * @date 2019/12/27 - 10:34
  * LeetCode---11. 盛最多水的容器
  */
-public class maxArea {
+public class LeetCode_11_MaxArea {
     /**
      * 解法一：暴力破解法（不推荐，时间复杂度太差）
      * */

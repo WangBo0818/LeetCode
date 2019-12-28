@@ -7,7 +7,7 @@ import java.util.List;
  * @date 2019/12/20 - 13:21
  * leetcode46---全排列
  */
-public class permute {
+public class LeetCode_46_Permute {
 
     public static void main(String[] args) {
         List<List<Integer>> res = permute2(new int[] {1, 2, 3});

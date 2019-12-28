@@ -3,7 +3,7 @@
  * @date 2019/12/26 - 15:51
  * LeetCode---6. Z字型变换
  */
-public class convert {
+public class LeetCode_6_Convert {
 
     public static void main(String[] args) {
         System.out.println(convert("LEETCODEISHIRING", 3));

@@ -3,7 +3,7 @@
  * @date 2019/12/25 - 9:54
  * LeetCode---2. 两数相加
  */
-public class addTwoNumbers {
+public class LeetCode_2_AddTwoNumbers {
 
     public class ListNode {
       int val;

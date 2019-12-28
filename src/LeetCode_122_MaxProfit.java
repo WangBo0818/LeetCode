@@ -3,7 +3,7 @@
  * @date 2019/12/21 - 9:50
  * LeetCode122---买卖股票的最佳时机II
  */
-public class maxProfit {
+public class LeetCode_122_MaxProfit {
 
     public static void main(String[] args) {
         System.out.println(maxProfit(new int[] {

@@ -6,7 +6,7 @@ import java.util.*;
  * @date 2019/12/20 - 14:19
  * LeetCode47---全排列II
  */
-public class permuteUnique {
+public class LeetCode_47_PermuteUnique {
 
     public static void main(String[] args) {
         List<List<Integer>> res = permuteUnique2(new int[] {1, 1, 2});

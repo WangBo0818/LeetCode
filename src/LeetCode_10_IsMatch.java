@@ -3,7 +3,7 @@
  * @date 2019/12/27 - 9:46
  * LeetCode---10.正则表达式匹配
  */
-public class isMatch {
+public class LeetCode_10_IsMatch {
 
     /**
      * 使用如下回溯算法的时间复杂度远远不如使用动态规划求解

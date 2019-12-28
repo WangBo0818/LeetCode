@@ -3,7 +3,7 @@
  * @date 2019/12/26 - 16:46
  * LeetCode---9. 回文数
  */
-public class isPalindrome {
+public class LeetCode_9_IsPalindrome {
     /**
      * 解法一：将整数转化为字符串类型，然后进行判断；注意：负数肯定不是回文数，可以直接返回false
      * */

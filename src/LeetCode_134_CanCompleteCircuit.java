@@ -1,9 +1,9 @@
 /**
  * @author wb
  * @date 2019/12/21 - 10:34
- * LeetCode134---加油站
+ * LeetCode---134. 加油站
  */
-public class canCompleteCircuit {
+public class LeetCode_134_CanCompleteCircuit {
 
     public static void main(String[] args) {
         System.out.println(canCompleteCircuit(new int[] {

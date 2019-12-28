@@ -3,7 +3,7 @@
  * @date 2019/12/25 - 10:16
  * LeetCode---1. 两数之和
  */
-public class twoSum {
+public class LeetCode_1_TwoSum {
     /**
      * 解法：暴力破解法
      *        因为是求两数之和，令num = target - nums[i]，然后遍历nums数组，找到nums[j] = num，

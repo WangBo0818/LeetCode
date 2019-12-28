@@ -3,7 +3,7 @@
  * @date 2019/12/26 - 16:39
  * LeetCode---8. 字符串转整数
  */
-public class myAtoi {
+public class LeetCode_8_MyAtoi {
     // 个人觉得这题没有做的必要，可以跳过
     public int myAtoi(String str) {
         str = str.trim();
