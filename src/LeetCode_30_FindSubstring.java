@@ -11,7 +11,7 @@ import java.util.Map;
 public class LeetCode_30_FindSubstring {
 
     /**
-     * 使用双指针 + 窗口滑动
+     * 使用双指针 + 窗口滑动(待办)
      * */
     public List<Integer> findSubstring(String s, String[] words) {
         if (s == null || s.length() == 0 || words == null || words.length == 0 ) {
