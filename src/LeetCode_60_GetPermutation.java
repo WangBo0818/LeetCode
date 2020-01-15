@@ -1,4 +1,5 @@
-import java.util.ArrayList;
+
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -12,41 +13,36 @@ public class LeetCode_60_GetPermutation {
         System.out.println(getPermutation(8, 13801));
     }
 
+    private static List<StringBuilder> res = new LinkedList<>();
+
+    /**
+     * 这题使用回溯算法的思路简单，但是时间复杂度和空间复杂度都太差
+     * 大多数人都是利用数学方法求解
+     * */
     public static String getPermutation(int n, int k) {
-        List<List<Integer>> list = new ArrayList<>();
-        List<Integer> num_list = new ArrayList<>();
         int[] visited = new int[n];
-        int[] nums = new int[n];
-        for(int i = 0; i < n; i++) {
-            nums[i] = i + 1;
-        }
-        backTrack(list, num_list, nums, visited, k);
-        List<Integer> res = list.get(k - 1);
-        String result = "";
-        for(int i = 0; i < res.size(); i++) {
-            result += res.get(i);
-        }
-        return result;
+        backTrack(n, k, 0, visited, new StringBuilder(""));
+        return res.get(k - 1).toString();
     }
 
-    public static void backTrack(List<List<Integer>> list, List<Integer> tmp, int[] nums, int[] visited, int k) {
+    private static void backTrack(int n, int k, int count, int[] visited, StringBuilder s) {
         // 递归出口
-        if(tmp.size() == nums.length) {
-            list.add(new ArrayList<>(tmp));
-            if(list.size() == k) {
-                return;
-            }
+        if (count == n) {
+            res.add(new StringBuilder(s));
+            return;
         }
-
-        for(int i = 0; i < nums.length; i++) {
-            if(visited[i] == 1) {
+        if (res.size() == k) {
+            return;
+        }
+        for (int i = 0; i < n; i++) {
+            if (visited[i] == 1) {
                 continue;
             }
             visited[i] = 1;
-            tmp.add(nums[i]);
-            backTrack(list, tmp, nums, visited, k);
+            s.append((i + 1));
+            backTrack(n, k, count + 1, visited, s);
             visited[i] = 0;
-            tmp.remove(tmp.size() - 1);
+            s.delete(s.length() - 1, s.length());
         }
     }
 }
