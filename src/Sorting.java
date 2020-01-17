@@ -9,7 +9,7 @@ public class Sorting {
         int[] arr = new int[] {
                 5, 7, 2, 4, 5, 3, 9, 6, 1, 8, 0, 4
         };
-        quickSort(arr, 0, arr.length - 1);
+        ThreeWayQuickSort(arr, 0, arr.length - 1);
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
         }
@@ -235,5 +235,40 @@ public class Sorting {
         }
     }
 
+    /**
+     * 三向切分快速排序：
+     *  三向切分快速排序是快速排序的一种优化算法之一。
+     *  对于有大量重复元素的数组，可以将数组切分为三部分，分别对应小于、等于和大于切分元素
+     *  三向切分快速排序对于有大量重复元素的随机数组可以再线性时间内完成排序
+     * */
+    private static void ThreeWayQuickSort(int[] nums, int left, int right) {
+        if (right <= left) {
+            return;
+        }
+        int i = left, j = right;
+        int k = left + 1;
+        int pivot =  nums[left];
+        while (k <= j) {
+            if (nums[k] < pivot) {
+                int tmp = nums[i];
+                nums[i] = nums[k];
+                nums[k] = tmp;
+                i++;
+                k++;
+            }else if (nums[k] > pivot) {
+                int tmp = nums[k];
+                nums[k] = nums[j];
+                nums[j] = tmp;
+                j--;
+            }else {
+                k++;
+            }
+        }
+        ThreeWayQuickSort(nums, left, i - 1);
+        ThreeWayQuickSort(nums, j + 1, right);
+    }
 
+    /**
+     * 堆排序
+     * */
 }
