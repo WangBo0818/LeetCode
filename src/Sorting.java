@@ -9,7 +9,7 @@ public class Sorting {
         int[] arr = new int[] {
                 5, 7, 2, 4, 5, 3, 9, 6, 1, 8, 0, 4
         };
-        ThreeWayQuickSort(arr, 0, arr.length - 1);
+        heapSort(arr);
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
         }
@@ -269,6 +269,52 @@ public class Sorting {
     }
 
     /**
-     * 堆排序
+     * 堆排序:
+     *  把最大元素和当前堆中数组的最后一个元素交换位置，并且不删除它，
+     *  那么就可以得到一个从尾到头的递减序列，从正向来看就是一个递增序列，这就是堆排序。
+     *
+     *  第一步：构建堆
+     *      无序数组建立堆最直接的方法是从左到右遍历数组进行上浮操作。
+     *      一个更高效的方法是从右至左进行下沉操作，如果一个节点的两个节点都已经是堆有序，
+     *      那么进行下沉操作可以使得这个节点为根节点的堆有序。
+     *      叶子节点不需要进行下沉操作，可以忽略叶子节点的元素，因此只需要遍历一半的元素即可。
+     *  第二步：交换堆顶元素与最后一个元素，交换之后需要进行下沉操作维持堆的有序状态。
      * */
+
+    public static void heapSort(int []nums){
+        int last = nums.length - 1;
+        //N构建大根堆
+        //从倒数第二层开始
+        for (int i = nums.length /2 - 1 ; i >= 0; i--){
+            heapIfy(nums, i, last);
+        }
+        while (last >= 1){
+            swap(nums,0,last--);
+            heapIfy(nums,0, last);
+        }
+    }
+
+    //i 大根堆调整
+    public static void heapIfy(int[] nums,int i,int last){
+        //判断有没有子节点（左孩子）
+        int left = i * 2 + 1;
+        while (left <= last){
+            int right = left + 1;
+            //左右节点最大值
+            int larger = right <= last && nums[right] > nums[left] ? right : left;
+            if(nums[larger] > nums[i]){
+                swap(nums, larger, i);
+                i = larger;
+                left = larger * 2 + 1;
+            } else {
+                break;
+            }
+        }
+    }
+
+    public static void  swap(int []nums,int a,int b){
+        int tmp = nums[a];
+        nums[a] = nums[b];
+        nums[b] = tmp;
+    }
 }
